@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Courses</title>
+    <link href="addingcss.css" rel="stylesheet"/>
+</head>
+<body>
+    <ul>
+            <li><br>studentname:<input type="text" name="database" > </li>
+            <li><br>surname:<input type="text" name="database"> </li>
+            <li><br>emailaddress:<input type="email" name="database"> </li>
+            <li> <br><input type="submit" value="Submit"></li>
+        </ul>
+Course List:
+{% for x in c %}
+    <ul>{{ x }}</ul>
+    <table>
+        {{ form.as_table }}
+           <thead>
+        <tr>
+            <th>coursename</th>
+            <th>coursecode</th>
+
+        </tr>
+        </thead>
+        <tr>
+            <td>{{x}}</td>
+            <td>{{x}}</td>
+
+        </tr>
+        <tr>
+            <td>{{x}}</td>
+            <td>{{x}}</td>
+
+        </tr>
+        </table>
+{% endfor %}
+
+</body>
+</html>

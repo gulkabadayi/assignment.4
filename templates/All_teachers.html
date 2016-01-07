@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Teachers</title>
+    <link href="allcss.css" rel="stylesheet"/>
+
+</head>
+<body>
+Teacher List:
+{% for x in t %}
+    <ul>{{ x }}</ul>
+    <table>
+        {{ form.as_table }}
+           <thead>
+        <tr>
+            <th>teachername</th>
+            <th>surname</th>
+
+        </tr>
+        </thead>
+        <tr>
+            <td>{{x}}</td>
+            <td>{{x}}</td>
+
+        </tr>
+        <tr>
+            <td>{{x}}</td>
+            <td>{{x}}</td>
+
+        </tr>
+        </table>
+{% endfor %}
+</body>
+</html>

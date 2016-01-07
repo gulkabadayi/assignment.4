@@ -1,0 +1,26 @@
+table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+}
+form{
+    margin: 10px;
+    color: aqua;
+}
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+}
+head{
+    margin:5px;
+    color: aqua;
+}
+th {
+    background-color: blue;
+    border-top: none;
+}
+
+td:first-child {
+    border-left: none;
+}

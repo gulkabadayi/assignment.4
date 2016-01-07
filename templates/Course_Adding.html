@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Course</title>
+        <link href="addingcss.css" rel="stylesheet"/>
+    <body>
+        <ul>
+            <li><br>coursename:<input type="text" name="database" > </li>
+            <li><br>coursecode:<input type="text" name="database"> </li>
+            <li> <br><input type="submit" value="Submit"></li>
+        </ul>
+        {% if form.errors %}
+        <p style="color: red;">
+        Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+        {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        {{ form.as_table }}
+           <thead>
+        <tr>
+            <th>coursename</th>
+            <th>coursecode</th>
+
+        </tr>
+        </thead>
+        <tr>
+            <td>none</td>
+            <td>none</td>
+
+        </tr>
+        <tr>
+            <td>none</td>
+            <td>none</td>
+
+        </tr>
+        </table>
+    </form>
+    </body>
+</html>

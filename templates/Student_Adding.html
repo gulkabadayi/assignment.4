@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Add Student</title>
+    <link href="addingcss.css" rel="stylesheet"/>
+    </head>
+<body>
+    <h1>Add Student</h1>
+    <ul>
+            <li><br>studentname:<input type="text" name="database" > </li>
+            <li><br>surname:<input type="text" name="database"> </li>
+            <li><br>emailaddress:<input type="email" name="database"> </li>
+            <li> <br><input type="submit" value="Submit"></li>
+        </ul>
+    {% if form.errors or form2.errors %}
+    <p style="color: red;">
+    Please correct the error{{ form.errors|pluralize }} {{ form2.errors|pluralize }}below.
+    </p>
+    {% endif %}
+<form action="" method="post">
+    {% csrf_token %}
+<table>
+{{ form.as_table }}
+    {{ form2.as_table }}
+    <thead>
+        <tr>
+            <th>teachername</th>
+            <th>surname</th>
+            <th>emailaddress</th>
+
+        </tr>
+        </thead>
+        <tr>
+            <td>none</td>
+            <td>none</td>
+            <td>none</td>
+
+        </tr>
+        <tr>
+            <td>none</td>
+            <td>none</td>
+            <td>none</td>
+
+        </tr>
+</table>
+
+</form>
+</body>
+</html>
